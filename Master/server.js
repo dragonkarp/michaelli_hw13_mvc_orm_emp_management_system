@@ -1,11 +1,11 @@
 const express = require("express")
-const exphs = require("express-handlebars")
+const exphbrs = require("express-handlebars")
 
 const app = express()
 
 const PORT = process.env.PORT || 3000
 
-app.engine("handlebars", exphs({defaultLayout : "main"}))
+app.engine("handlebars", exphbrs({defaultLayout : "main"}))
 app.set("view engine", "handlebars")
 
 app.use(express.urlencoded({extended : true}))

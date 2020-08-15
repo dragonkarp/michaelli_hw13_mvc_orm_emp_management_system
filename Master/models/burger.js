@@ -10,7 +10,12 @@ const burger = {
         orm.insertOne("burgers", columnNames, values, function(results){
             cbController(results)
         })
-    }
+    },
+    updateOne : function(columnNames, values, cbController) {
+        orm.updateOne("burgers", columnNames, values, function(results) {
+            cbController(results) //i dont understand this line. where is the origin of this function? I the function is passed as a param, but from where?
+        })
+    } //need help. not sure what the params should be. it seems exactly the same as insertOne(), but that doesn't feel correct.
 }
 
 
